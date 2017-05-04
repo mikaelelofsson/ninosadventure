@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ConstructionSurfaceView"/>
+    <declare-styleable name="TrainSurfaceView"/>
+    <declare-styleable name="AirportSurfaceView"/>
+    <declare-styleable name="OceanSurfaceView"/>
+    <declare-styleable name="TownSurfaceView"/>
+
+    <declare-styleable name="FarmBackSurfaceView"/>
+    <declare-styleable name="OceanBackSurfaceView"/>
+    <declare-styleable name="AirportBackSurfaceView"/>
+    <declare-styleable name="TownBackSurfaceView"/>
+    <declare-styleable name="TrainBackSurfaceView"/>
+    <declare-styleable name="ConstructionBackSurfaceView"/>
+    <declare-styleable name="ButtonsView"/>
+</resources>
