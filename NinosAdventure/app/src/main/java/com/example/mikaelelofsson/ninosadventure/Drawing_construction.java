@@ -26,7 +26,7 @@ import java.util.ArrayList;
 /**
  * Created by Mikael Elofsson on 2017-02-12.
  */
-/*
+
 public class Drawing_construction extends View implements View.OnTouchListener {
 
     Paint rectPaint;

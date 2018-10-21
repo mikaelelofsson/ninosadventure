@@ -27,7 +27,7 @@ import java.util.ArrayList;
 /**
  * Created by Mikael Elofsson on 2017-02-16.
  */
-/*
+
 public class TrainSurfaceView extends SurfaceView implements SurfaceHolder.Callback {
 
     SurfaceHolder trainHolder;
@@ -73,26 +73,26 @@ public class TrainSurfaceView extends SurfaceView implements SurfaceHolder.Callb
         startOfScreen = -500;
 
         train1 = new Vehicle();
-        train1.setVehicleWidth((int) (32.5 * displayWidth / 100));
-        train1.setVehicleHeight(((23 * train1.getVehicleWidth() / 100)));
+        train1.setWidth((int) (32.5 * displayWidth / 100));
+        train1.setHeight(((23 * train1.getWidth() / 100)));
         train1.setXPos((float)(1 * displayWidth / 100));
-        train1.setYPos((displayHeight - (110 * train1.getVehicleHeight() / 100)));
+        train1.setYPos((displayHeight - (110 * train1.getHeight() / 100)));
         train1.setStartPosX(train1.getXPos());
         train1.setStartPosY(train1.getYPos());
 
         train2 = new Vehicle();
-        train2.setVehicleWidth((int) (32.5 * displayWidth / 100));
-        train2.setVehicleHeight((int)(23 * train2.getVehicleWidth() / 100));
-        train2.setXPos((displayWidth/2) - (train2.getVehicleWidth()/2));
-        train2.setYPos((displayHeight - (110 * train2.getVehicleHeight() / 100)));
+        train2.setWidth((int) (32.5 * displayWidth / 100));
+        train2.setHeight((int)(23 * train2.getWidth() / 100));
+        train2.setXPos((displayWidth/2) - (train2.getWidth()/2));
+        train2.setYPos((displayHeight - (110 * train2.getHeight() / 100)));
         train2.setStartPosX(train2.getXPos());
         train2.setStartPosY(train2.getYPos());
 
         train3 = new Vehicle();
-        train3.setVehicleWidth((int) (32.5 * displayWidth / 100));
-        train3.setVehicleHeight((int) (23 * train3.getVehicleWidth() / 100));
+        train3.setWidth((int) (32.5 * displayWidth / 100));
+        train3.setHeight((int) (23 * train3.getWidth() / 100));
         train3.setXPos((displayWidth - ((float)(33.5 * displayWidth / 100))));
-        train3.setYPos((displayHeight - (110 * train3.getVehicleHeight() / 100)));
+        train3.setYPos((displayHeight - (110 * train3.getHeight() / 100)));
         train3.setStartPosX(train3.getXPos());
         train3.setStartPosY(train3.getYPos());
 
@@ -101,14 +101,14 @@ public class TrainSurfaceView extends SurfaceView implements SurfaceHolder.Callb
 
 
         Bitmap origTrain1Bmp = BitmapFactory.decodeResource(this.getResources(), R.drawable.train1);
-        train1Bmp = Bitmap.createScaledBitmap(origTrain1Bmp, train1.getVehicleWidth(), train1.getVehicleHeight(), true);
+        train1Bmp = Bitmap.createScaledBitmap(origTrain1Bmp, (int)train1.getWidth(), (int)train1.getHeight(), true);
 
         Bitmap origTrain2Bmp = BitmapFactory.decodeResource(this.getResources(), R.drawable.train2);
-        train2Bmp = Bitmap.createScaledBitmap(origTrain2Bmp, train2.getVehicleWidth(), train2.getVehicleHeight(), true);
+        train2Bmp = Bitmap.createScaledBitmap(origTrain2Bmp, (int)train2.getWidth(),(int) train2.getHeight(), true);
 
 
         Bitmap origTrain3Bmp = BitmapFactory.decodeResource(this.getResources(), R.drawable.train3);
-        train3Bmp = Bitmap.createScaledBitmap(origTrain3Bmp,train3.getVehicleWidth(), train3.getVehicleHeight(), true);
+        train3Bmp = Bitmap.createScaledBitmap(origTrain3Bmp, (int)train3.getWidth(), (int)train3.getHeight(), true);
 
         this.myContext = context;
         rectPaint = new Paint();
@@ -207,20 +207,20 @@ public class TrainSurfaceView extends SurfaceView implements SurfaceHolder.Callb
                 setInitialCondition(train1,
                         yPos,
                         xPos,
-                        train1.getVehicleWidth(),
-                        train1.getVehicleHeight());
+                        (int)train1.getWidth(),
+                        (int)train1.getHeight());
 
                 setInitialCondition(train2,
                         yPos,
                         xPos,
-                        train2.getVehicleWidth(),
-                        train2.getVehicleHeight());
+                        (int) train2.getWidth(),
+                        (int)train2.getHeight());
 
                 setInitialCondition(train3,
                         yPos,
                         xPos,
-                        train3.getVehicleWidth(),
-                        train3.getVehicleHeight());
+                        (int)train3.getWidth(),
+                        (int)train3.getHeight());
 
 
             case MotionEvent.ACTION_MOVE:
@@ -236,8 +236,8 @@ public class TrainSurfaceView extends SurfaceView implements SurfaceHolder.Callb
                         disabledVehicles,
                         yPos,
                         xPos,
-                        train1.getVehicleWidth(),
-                        train1.getVehicleHeight());
+                        (int)train1.getWidth(),
+                        (int)train1.getHeight());
 
                 disabledVehicles.clear();
                 disabledVehicles.add(train1);
@@ -246,8 +246,8 @@ public class TrainSurfaceView extends SurfaceView implements SurfaceHolder.Callb
                         disabledVehicles,
                         yPos,
                         xPos,
-                        train2.getVehicleWidth(),
-                        train2.getVehicleHeight());
+                        (int)train2.getWidth(),
+                        (int)train2.getHeight());
 
                 disabledVehicles.clear();
                 disabledVehicles.add(train1);
@@ -256,8 +256,8 @@ public class TrainSurfaceView extends SurfaceView implements SurfaceHolder.Callb
                         disabledVehicles,
                         yPos,
                         xPos,
-                        train3.getVehicleWidth(),
-                        train3.getVehicleHeight());
+                        (int)train3.getWidth(),
+                        (int)train3.getHeight());
 
                 disabledVehicles.clear();
 
@@ -270,26 +270,26 @@ public class TrainSurfaceView extends SurfaceView implements SurfaceHolder.Callb
                 checkIfMoving(train3);
 
                 decideAnimation(train1,
-                        76.5 * displayHeight / 100 - train1.getVehicleHeight(),     //limit if to drop it on the road1
-                        76.5 * displayHeight / 100 - train1.getVehicleHeight(),     //point of where to place vehicle if pulled up
-                        86.5 * displayHeight / 100 - train1.getVehicleHeight(),         //limit if to pull vehicle up on the road1
-                        86.5 * displayHeight / 100 - train1.getVehicleHeight(),         //limit if to draw vehicle back ...same as lowerborder??
+                        76.5 * displayHeight / 100 - train1.getHeight(),     //limit if to drop it on the road1
+                        76.5 * displayHeight / 100 - train1.getHeight(),     //point of where to place vehicle if pulled up
+                        86.5 * displayHeight / 100 - train1.getHeight(),         //limit if to pull vehicle up on the road1
+                        86.5 * displayHeight / 100 - train1.getHeight(),         //limit if to draw vehicle back ...same as lowerborder??
                         train1.getStartPosY(),        // where to place car at Y
                         train1.getStartPosX());
 
                 decideAnimation(train2,
-                        76.5 * displayHeight / 100 - train2.getVehicleHeight(),     //limit if to drop it on the road1
-                        76.5 * displayHeight / 100 - train2.getVehicleHeight(),     //point of where to place vehicle if pulled up
-                        86.5 * displayHeight / 100 - train2.getVehicleHeight(),         //limit if to pull vehicle up on the road1
-                        86.5 * displayHeight / 100 - train2.getVehicleHeight(),         //limit if to draw vehicle back ...same as lowerborder??
+                        76.5 * displayHeight / 100 - train2.getHeight(),     //limit if to drop it on the road1
+                        76.5 * displayHeight / 100 - train2.getHeight(),     //point of where to place vehicle if pulled up
+                        86.5 * displayHeight / 100 - train2.getHeight(),         //limit if to pull vehicle up on the road1
+                        86.5 * displayHeight / 100 - train2.getHeight(),         //limit if to draw vehicle back ...same as lowerborder??
                         train2.getStartPosY(),        // where to place car at Y
                         train2.getStartPosX());
 
                 decideAnimation(train3,
-                        76.5 * displayHeight / 100 - train3.getVehicleHeight(),     //limit if to drop it on the road1
-                        76.5 * displayHeight / 100 - train3.getVehicleHeight(),     //point of where to place vehicle if pulled up
-                        86.5 * displayHeight / 100 - train3.getVehicleHeight(),         //limit if to pull vehicle up on the road1
-                        86.5 * displayHeight / 100 - train3.getVehicleHeight(),         //limit if to draw vehicle back ...same as lowerborder??
+                        76.5 * displayHeight / 100 - train3.getHeight(),     //limit if to drop it on the road1
+                        76.5 * displayHeight / 100 - train3.getHeight(),     //point of where to place vehicle if pulled up
+                        86.5 * displayHeight / 100 - train3.getHeight(),         //limit if to pull vehicle up on the road1
+                        86.5 * displayHeight / 100 - train3.getHeight(),         //limit if to draw vehicle back ...same as lowerborder??
                         train3.getStartPosY(),        // where to place car at Y
                         train3.getStartPosX());
 
@@ -533,7 +533,7 @@ public class TrainSurfaceView extends SurfaceView implements SurfaceHolder.Callb
                 if (!train1.getFlagDrawBack()) {
 
                     SetVehicleStartPos train1PrepAnim = new SetVehicleStartPos(train1Animator);
-                    train1PrepAnim.animateVehicleToFinishState(train1, (displayWidth/2-((train1.getVehicleWidth()/2)*3)));
+                    train1PrepAnim.animateVehicleToFinishState(train1, (displayWidth/2-((train1.getWidth()/2)*3)));
                     train1PrepAnim.vehicleAnimator.addListener(train1prepAnim);
                     train1PrepAnim.startAnimation();
                 }
@@ -608,7 +608,7 @@ public class TrainSurfaceView extends SurfaceView implements SurfaceHolder.Callb
 
             if (!train2.getFlagDrawBack()) {
                 SetVehicleStartPos train2PrepAnim = new SetVehicleStartPos(train2Animator);
-                train2PrepAnim.animateVehicleToFinishState(train2,(displayWidth/2-train2.getVehicleWidth()/2));
+                train2PrepAnim.animateVehicleToFinishState(train2,(displayWidth/2-train2.getWidth()/2));
                 train2PrepAnim.vehicleAnimator.addListener(train2prepAnim);
                 train2PrepAnim.startAnimation();
 
@@ -686,7 +686,7 @@ public class TrainSurfaceView extends SurfaceView implements SurfaceHolder.Callb
 
             if (!train3.getFlagDrawBack()) {
                 SetVehicleStartPos train3PrepAnim = new SetVehicleStartPos(train3Animator);
-                train3PrepAnim.animateVehicleToFinishState(train3, (displayWidth/2+(train1.getVehicleWidth()/2)));
+                train3PrepAnim.animateVehicleToFinishState(train3, (displayWidth/2+(train1.getWidth()/2)));
                 train3PrepAnim.vehicleAnimator.addListener(train3prepAnim);
                 train3PrepAnim.startAnimation();
 
@@ -861,4 +861,3 @@ public class TrainSurfaceView extends SurfaceView implements SurfaceHolder.Callb
 
 
 
-*/

@@ -27,7 +27,7 @@ import java.util.ArrayList;
 /**
  * Created by Mikael Elofsson on 2017-02-16.
  */
-/*
+
 public class FarmSurfaceView extends SurfaceView implements SurfaceHolder.Callback {
 
     SurfaceHolder farmHolder;
@@ -736,4 +736,3 @@ public class FarmSurfaceView extends SurfaceView implements SurfaceHolder.Callba
 
 
 
-*/

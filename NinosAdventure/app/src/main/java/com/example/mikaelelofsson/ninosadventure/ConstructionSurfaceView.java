@@ -1,4 +1,4 @@
-/*package com.example.mikaelelofsson.ninosadventure;
+package com.example.mikaelelofsson.ninosadventure;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -26,7 +26,7 @@ import java.util.ArrayList;
 /**
  * Created by Mikael Elofsson on 2017-02-16.
  */
-/*
+
 public class ConstructionSurfaceView extends SurfaceView implements SurfaceHolder.Callback{
 
     SurfaceHolder holderOfTheSurface;
@@ -750,4 +750,3 @@ public class ConstructionSurfaceView extends SurfaceView implements SurfaceHolde
 
 }
 
-*/

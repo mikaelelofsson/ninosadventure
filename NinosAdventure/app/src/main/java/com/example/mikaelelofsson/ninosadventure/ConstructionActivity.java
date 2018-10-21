@@ -1,4 +1,4 @@
-/*package com.example.mikaelelofsson.ninosadventure;
+package com.example.mikaelelofsson.ninosadventure;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,8 +12,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-*/
-/*
+
 public class ConstructionActivity extends AppCompatActivity {
 
     private static final String IMAGEVIEW_TAG = "carImage";
@@ -83,4 +82,3 @@ public class ConstructionActivity extends AppCompatActivity {
         surfaceView.surfaceDestroyed(surfaceViewHolder);
     }
 }
-*/

@@ -1,5 +1,5 @@
 
-/*
+
     package com.example.mikaelelofsson.ninosadventure;
 
     import android.content.Context;
@@ -114,4 +114,4 @@
             }
             return false;
         }
-    }*/
+    }

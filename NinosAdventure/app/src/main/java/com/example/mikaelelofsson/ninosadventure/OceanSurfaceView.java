@@ -28,7 +28,7 @@ import java.util.ArrayList;
 /**
  * Created by Mikael Elofsson on 2017-02-16.
  */
-/*
+
 public class OceanSurfaceView extends SurfaceView implements SurfaceHolder.Callback {
 
     SurfaceHolder oceanHolder;
@@ -72,41 +72,41 @@ public class OceanSurfaceView extends SurfaceView implements SurfaceHolder.Callb
         startOfScreen = -500;
 
         sailingBoat = new Vehicle();
-        sailingBoat.setVehicleWidth((int)(55*displayWidth/100));
-        sailingBoat.setVehicleHeight(((55*sailingBoat.getVehicleWidth()/100)));
+        sailingBoat.setWidth((int)(55*displayWidth/100));
+        sailingBoat.setHeight(((55*sailingBoat.getWidth()/100)));
         sailingBoat.setXPos( (2*displayWidth/100));
-        sailingBoat.setYPos( (displayHeight-(105*sailingBoat.getVehicleHeight()/100)));
+        sailingBoat.setYPos( (displayHeight-(105*sailingBoat.getHeight()/100)));
         sailingBoat.setStartPosX(sailingBoat.getXPos());
         sailingBoat.setStartPosY(sailingBoat.getYPos());
 
         oak = new Vehicle();
-        oak.setVehicleWidth((int)(18*displayWidth/100));
-        oak.setVehicleHeight(((65*oak.getVehicleWidth()/100)));
+        oak.setWidth((int)(18*displayWidth/100));
+        oak.setHeight(((65*oak.getWidth()/100)));
         oak.setXPos( (40*displayWidth/100));
-        oak.setYPos( (displayHeight-(105*oak.getVehicleHeight()/100)));
+        oak.setYPos( (displayHeight-(105*oak.getHeight()/100)));
         oak.setStartPosX(oak.getXPos());
         oak.setStartPosY(oak.getYPos());
 
 
         ship = new Vehicle();
-        ship.setVehicleWidth((int)(50*displayWidth/100));
-        ship.setVehicleHeight(((65*ship.getVehicleWidth()/100)));
+        ship.setWidth((int)(50*displayWidth/100));
+        ship.setHeight(((65*ship.getWidth()/100)));
         ship.setXPos( (displayWidth - 52*displayWidth/100));
-        ship.setYPos( (displayHeight-(105*ship.getVehicleHeight()/100)));
+        ship.setYPos( (displayHeight-(105*ship.getHeight()/100)));
         ship.setStartPosX(ship.getXPos());
         ship.setStartPosY(ship.getYPos());
 
 
 
         Bitmap origSailingBoatBmp = BitmapFactory.decodeResource(this.getResources(), R.drawable.sailingboat_scaled);
-        sailingBoatBmp = Bitmap.createScaledBitmap(origSailingBoatBmp, sailingBoat.getVehicleWidth(), sailingBoat.getVehicleHeight(), true);
+        sailingBoatBmp = Bitmap.createScaledBitmap(origSailingBoatBmp, (int)sailingBoat.getWidth(), (int)sailingBoat.getHeight(), true);
 
         Bitmap origOakBmp = BitmapFactory.decodeResource(this.getResources(), R.drawable.oak_scaled);
-        oakBmp = Bitmap.createScaledBitmap(origOakBmp, oak.getVehicleWidth(), oak.getVehicleHeight(), true);
+        oakBmp = Bitmap.createScaledBitmap(origOakBmp, (int)oak.getWidth(), (int)oak.getHeight(), true);
 
 
         Bitmap origShipBmp = BitmapFactory.decodeResource(this.getResources(), R.drawable.ship);
-        shipBmp = Bitmap.createScaledBitmap(origShipBmp, ship.getVehicleWidth(), ship.getVehicleHeight(), true);
+        shipBmp = Bitmap.createScaledBitmap(origShipBmp, (int)ship.getWidth(), (int)ship.getHeight(), true);
 
         this.myContext = context;
         rectPaint = new Paint();
@@ -213,20 +213,20 @@ public class OceanSurfaceView extends SurfaceView implements SurfaceHolder.Callb
                 setInitialCondition(sailingBoat,
                         yPos,
                         xPos,
-                        sailingBoat.getVehicleWidth(),
-                        sailingBoat.getVehicleHeight());
+                        (int)sailingBoat.getWidth(),
+                        (int)sailingBoat.getHeight());
 
                 setInitialCondition(oak,
                         yPos,
                         xPos,
-                        oak.getVehicleWidth(),
-                        oak.getVehicleHeight());
+                        (int)oak.getWidth(),
+                        (int)oak.getHeight());
 
                 setInitialCondition(ship,
                         yPos,
                         xPos,
-                        ship.getVehicleWidth(),
-                        ship.getVehicleHeight());
+                        (int)ship.getWidth(),
+                        (int)ship.getHeight());
 
 
             case MotionEvent.ACTION_MOVE:
@@ -242,8 +242,8 @@ public class OceanSurfaceView extends SurfaceView implements SurfaceHolder.Callb
                         disabledVehicles,
                         yPos,
                         xPos,
-                        sailingBoat.getVehicleWidth(),
-                        sailingBoat.getVehicleHeight());
+                        (int)sailingBoat.getWidth(),
+                        (int)sailingBoat.getHeight());
 
                 disabledVehicles.clear();
                 disabledVehicles.add(sailingBoat);
@@ -252,8 +252,8 @@ public class OceanSurfaceView extends SurfaceView implements SurfaceHolder.Callb
                         disabledVehicles,
                         yPos,
                         xPos,
-                        oak.getVehicleWidth(),
-                        oak.getVehicleHeight());
+                        (int)oak.getWidth(),
+                        (int)oak.getHeight());
 
                 disabledVehicles.clear();
                 disabledVehicles.add(sailingBoat);
@@ -262,8 +262,8 @@ public class OceanSurfaceView extends SurfaceView implements SurfaceHolder.Callb
                         disabledVehicles,
                         yPos,
                         xPos,
-                        ship.getVehicleWidth(),
-                        ship.getVehicleHeight());
+                        (int)ship.getWidth(),
+                        (int)ship.getHeight());
 
                 disabledVehicles.clear();
 
@@ -277,27 +277,27 @@ public class OceanSurfaceView extends SurfaceView implements SurfaceHolder.Callb
 
 
                 decideAnimation(sailingBoat,
-                        65 * displayHeight / 100 - sailingBoat.getVehicleHeight(),     //limit if to drop it on the road1
-                        65 * displayHeight / 100 - sailingBoat.getVehicleHeight(),     //point of where to place vehicle if pulled up
-                        85 * displayHeight / 100 - sailingBoat.getVehicleHeight(),         //limit if to pull vehicle up on the road1
-                        85 * displayHeight / 100 - sailingBoat.getVehicleHeight(),      //limit if to draw vehicle back ...same as lowerborder??
+                        65 * displayHeight / 100 - sailingBoat.getHeight(),     //limit if to drop it on the road1
+                        65 * displayHeight / 100 - sailingBoat.getHeight(),     //point of where to place vehicle if pulled up
+                        85 * displayHeight / 100 - sailingBoat.getHeight(),         //limit if to pull vehicle up on the road1
+                        85 * displayHeight / 100 - sailingBoat.getHeight(),      //limit if to draw vehicle back ...same as lowerborder??
                         sailingBoat.getStartPosY(),        // where to place car at Y
                         sailingBoat.getStartPosX());       // where to place car at X
 
 
                 decideAnimation(oak,
-                        80 * displayHeight / 100 - oak.getVehicleHeight(),     //limit if to drop it on the road1
-                        80 * displayHeight / 100 - oak.getVehicleHeight(),     //point of where to place vehicle if pulled up
-                        90 * displayHeight / 100 - oak.getVehicleHeight(),         //limit if to pull vehicle up on the road1
-                        90 * displayHeight / 100 - oak.getVehicleHeight(),
+                        80 * displayHeight / 100 - oak.getHeight(),     //limit if to drop it on the road1
+                        80 * displayHeight / 100 - oak.getHeight(),     //point of where to place vehicle if pulled up
+                        90 * displayHeight / 100 - oak.getHeight(),         //limit if to pull vehicle up on the road1
+                        90 * displayHeight / 100 - oak.getHeight(),
                         oak.getStartPosY(),
                         oak.getStartPosX());
 
                 decideAnimation(ship,
-                        65 * displayHeight / 100 - ship.getVehicleHeight(),     //limit if to drop it on the road1
-                        65 * displayHeight / 100 - ship.getVehicleHeight(),     //point of where to place vehicle if pulled up
-                        85 * displayHeight / 100 - ship.getVehicleHeight(),         //limit if to pull vehicle up on the road1
-                        85 * displayHeight / 100 - ship.getVehicleHeight(),
+                        65 * displayHeight / 100 - ship.getHeight(),     //limit if to drop it on the road1
+                        65 * displayHeight / 100 - ship.getHeight(),     //point of where to place vehicle if pulled up
+                        85 * displayHeight / 100 - ship.getHeight(),         //limit if to pull vehicle up on the road1
+                        85 * displayHeight / 100 - ship.getHeight(),
                         ship.getStartPosY(),
                         ship.getStartPosX());
 
@@ -752,7 +752,7 @@ public class OceanSurfaceView extends SurfaceView implements SurfaceHolder.Callb
 
 }
 
-*/
+
 
 
 

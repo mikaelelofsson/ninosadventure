@@ -28,7 +28,7 @@ import android.view.animation.DecelerateInterpolator;
 
 import java.util.ArrayList;
 
-/*
+
 public class Drawing extends View implements View.OnTouchListener {
 
     Paint rectPaint;
@@ -904,5 +904,5 @@ public class Drawing extends View implements View.OnTouchListener {
 
 
 
-*/
+
 

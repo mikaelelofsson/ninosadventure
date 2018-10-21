@@ -15,7 +15,7 @@ import android.widget.Toast;
 /**
  * Created by Mikael Elofsson on 2017-03-11.
  */
-/*
+
 public class LoadGame extends AppCompatActivity implements View.OnTouchListener {
 
     static int displayHeight;
@@ -255,4 +255,3 @@ cursor.moveToNext();
         return false;
     }
 }
-*/

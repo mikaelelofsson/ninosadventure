@@ -3,6 +3,7 @@ package com.example.mikaelelofsson.ninosadventure;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.graphics.Point;
 import android.os.Build;
 import android.view.Display;
@@ -23,9 +24,13 @@ class GameBitmap{
     Bitmap scaledBmp;
 
 
+
+
+
     public GameBitmap (SurfaceView sw,float width, float height, int drawable) {
         origBmp = BitmapFactory.decodeResource(sw.getResources(), drawable);
         scaledBmp = Bitmap.createScaledBitmap(origBmp, (int)width, (int)height, true);
+
 
     }
 

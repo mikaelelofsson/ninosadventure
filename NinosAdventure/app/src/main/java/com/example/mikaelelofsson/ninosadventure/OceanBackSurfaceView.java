@@ -22,7 +22,7 @@ import android.view.animation.LinearInterpolator;
 /**
  * Created by Mikael Elofsson on 2017-02-16.
  */
-/*
+
 public class OceanBackSurfaceView extends SurfaceView implements SurfaceHolder.Callback {
 
     SurfaceHolder backgroundHolder;
@@ -317,7 +317,7 @@ public class OceanBackSurfaceView extends SurfaceView implements SurfaceHolder.C
 
 
 
-*/
+
 
 
 

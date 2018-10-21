@@ -1,4 +1,4 @@
-/*
+
 package com.example.mikaelelofsson.ninosadventure;
 
 
@@ -40,8 +40,7 @@ public class AirportSurfaceView extends SurfaceView implements SurfaceHolder.Cal
     GameThread gameThread;
     Paint rectColor = new Paint();
     Context context;
-*/
-/*
+
     Paint rectPaint;
     Context myContext;
 
@@ -886,6 +885,6 @@ public class AirportSurfaceView extends SurfaceView implements SurfaceHolder.Cal
 }
 
 
-*/
+
 
 

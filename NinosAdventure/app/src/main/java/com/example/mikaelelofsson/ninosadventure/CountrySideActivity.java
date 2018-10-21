@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
-/*public class CountrySideActivity extends AppCompatActivity {
+public class CountrySideActivity extends AppCompatActivity {
 
     FarmSurfaceView animationFarmSurfaceView;
     FarmBackSurfaceView bgFarmSurfaceView;
@@ -113,4 +113,3 @@ import android.widget.ImageView;
         return false;
     }
 }
-*/

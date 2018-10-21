@@ -40,7 +40,6 @@ public class TownBackSurfaceView extends SurfaceView implements SurfaceHolder.Ca
     Context context;
 
     Paint rectPaint;
-    Context myContext;
 
     AnimatorSet skySet;
     BackgroundElement road;
@@ -195,7 +194,6 @@ public class TownBackSurfaceView extends SurfaceView implements SurfaceHolder.Ca
 
 
 
-        this.myContext = context;
         rectPaint = new Paint();
         rectPaint.setColor(Color.WHITE);
 
@@ -234,6 +232,9 @@ public class TownBackSurfaceView extends SurfaceView implements SurfaceHolder.Ca
     public void exitAndContinue () {
 
        backgroundThread.setRunning(false);
+        Intent intent = new Intent(context, BusTravelActivity.class);
+
+        context.startActivity(intent);
        /* boolean retry2 = true;
 
 
@@ -369,7 +370,7 @@ public class TownBackSurfaceView extends SurfaceView implements SurfaceHolder.Ca
 
                 Matrix matrixLeftWheel = busCloseUp.animateWheel(busCloseUp.leftWheel);
                 Matrix matrixRightWheel = busCloseUp.animateWheel(busCloseUp.rightWheel);
-                //busCloseUp.animatePosition((float)29*displayHeight/100,(float)31*displayHeight/100);
+                //bus.animatePosition((float)29*displayHeight/100,(float)31*displayHeight/100);
 
                 canvas.drawBitmap(townCloseUpBmp, townCloseUp1.getXPos(), townCloseUp1.getYPos(), null);
 
@@ -593,9 +594,6 @@ public class TownBackSurfaceView extends SurfaceView implements SurfaceHolder.Ca
         public void onAnimationEnd(Animator animation) {
             exitAndContinue();
         }
-
-
-
 
         @Override
         public void onAnimationCancel(Animator animation) {

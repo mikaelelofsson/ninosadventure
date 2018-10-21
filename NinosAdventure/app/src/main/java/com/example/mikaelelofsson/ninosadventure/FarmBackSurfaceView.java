@@ -21,7 +21,7 @@ import android.view.animation.LinearInterpolator;
 /**
  * Created by Mikael Elofsson on 2017-02-16.
  */
-/*
+
 public class FarmBackSurfaceView extends SurfaceView implements SurfaceHolder.Callback {
 
     SurfaceHolder backgroundHolder;
@@ -271,4 +271,3 @@ public class FarmBackSurfaceView extends SurfaceView implements SurfaceHolder.Ca
 
 
 
-*/

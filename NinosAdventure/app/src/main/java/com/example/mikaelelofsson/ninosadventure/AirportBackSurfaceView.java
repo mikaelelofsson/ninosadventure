@@ -1,4 +1,4 @@
-/*package com.example.mikaelelofsson.ninosadventure;
+package com.example.mikaelelofsson.ninosadventure;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -25,7 +25,7 @@ import static com.example.mikaelelofsson.ninosadventure.AirportActivity.animatio
 /**
  * Created by Mikael Elofsson on 2017-02-16.
  */
-/*
+
 public class AirportBackSurfaceView extends SurfaceView implements SurfaceHolder.Callback {
 
     SurfaceHolder backgroundHolder;
@@ -415,4 +415,4 @@ void animateItems ()
 
 
 
-*/
+
